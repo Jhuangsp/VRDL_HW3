@@ -102,3 +102,13 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+weights/
+runs/
+output/
+mydata/
+data/
+cfg/
+*.pdf
+train_batch0.jpg
+utils/gcp.sh
