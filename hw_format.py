@@ -9,7 +9,8 @@ pp = pprint.PrettyPrinter(indent=4)
 filepath = '.\\output'
 images = glob.glob(filepath + '\\*.png')
 answers = list(map(lambda i: i + '.txt', images))
-answers = list(map(lambda i: [int(i.split('\\')[-1].split('.')[0]), i], answers))
+answers = list(
+    map(lambda i: [int(i.split('\\')[-1].split('.')[0]), i], answers))
 answers.sort()
 answers = [i for _, i in answers]
 

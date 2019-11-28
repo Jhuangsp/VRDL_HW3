@@ -14,7 +14,8 @@ def gdrive_download(id='1HaXkef9z6y5l4vUnCYgdmEAj61c6bfWO', name='coco.zip'):
     # from utils.google_utils import *; gdrive_download()
     t = time.time()
 
-    print('Downloading https://drive.google.com/uc?export=download&id=%s as %s... ' % (id, name), end='')
+    print('Downloading https://drive.google.com/uc?export=download&id=%s as %s... ' %
+          (id, name), end='')
     if os.path.exists(name):  # remove existing
         os.remove(name)
 
@@ -27,7 +28,8 @@ def gdrive_download(id='1HaXkef9z6y5l4vUnCYgdmEAj61c6bfWO', name='coco.zip'):
 
     # Attempt small file download
     if not os.path.exists(name):  # file size < 40MB
-        s = 'curl -f -L -o %s https://drive.google.com/uc?export=download&id=%s' % (name, id)
+        s = 'curl -f -L -o %s https://drive.google.com/uc?export=download&id=%s' % (
+            name, id)
         os.system(s)
 
     # Unzip if archive
